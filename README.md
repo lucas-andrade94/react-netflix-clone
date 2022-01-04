@@ -19,6 +19,7 @@ Project developed using the following technologies:
 - [React](https://reactjs.org/)
 - [Redux](https://redux.js.org/)
 - [Firebase](https://firebase.google.com/)
+- [The Movie Database API](https://www.themoviedb.org/)
 
 
 ## 💿 Instalation
