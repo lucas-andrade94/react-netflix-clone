@@ -29,6 +29,13 @@
   padding-bottom: 0.3rem;
 }
 
+.banner__information {
+  display: flex;
+  padding: 0.5rem 0;
+  font-weight: 700;
+  align-items: center;
+}
+
 .banner__description {
   width: 45rem;
   line-height: 1.3;

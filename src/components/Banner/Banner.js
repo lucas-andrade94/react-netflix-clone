@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import Rating from "@mui/material/Rating";
 
 import axios from "../../api/axios";
 import requests from "../../api/Request";
@@ -6,6 +7,7 @@ import "./Banner.css";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
+  let firstDate = new Date(movie?.first_air_date);
 
   useEffect(() => {
     async function fetchData() {
@@ -41,6 +43,15 @@ function Banner() {
             <h2 className="banner__title">
               {movie?.title || movie?.name || movie?.original_name}
             </h2>
+            <div className="banner__information">
+              <Rating
+                name="read-only"
+                value={movie?.vote_average / 2}
+                precision={0.1}
+                readOnly
+              />
+              <p>{firstDate.getFullYear()}</p>
+            </div>
             <div className="banner__buttons">
               <button className="banner__button">Play</button>
               <button className="banner__button">+ My List</button>

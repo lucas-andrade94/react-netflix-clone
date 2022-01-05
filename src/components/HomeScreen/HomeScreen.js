@@ -5,6 +5,7 @@ import NavBar from "../Navbar/Navbar";
 import Banner from "../Banner/Banner";
 import Row from "../Row/Row";
 import requests from "../../api/Request";
+import Footer from "../Footer/Footer";
 
 function HomeScreen() {
   return (
@@ -48,6 +49,7 @@ function HomeScreen() {
         title="Documentaries"
         fetchUrl={requests.fetchDocumentaries}
       />
+      <Footer />
     </div>
   );
 }
