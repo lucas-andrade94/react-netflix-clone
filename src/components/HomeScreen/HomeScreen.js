@@ -12,17 +12,42 @@ function HomeScreen() {
       <NavBar />
       <Banner />
       <Row
+        link="originals"
         title="NETFLIX ORIGINALS"
         fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow
       />
-      <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
-      <Row title="Top Rated" fetchUrl={requests.fetchTopRated} />
-      <Row title="Action Movies" fetchUrl={requests.fetchActionMovies} />
-      <Row title="Comedy Movies" fetchUrl={requests.fetchComedyMovies} />
-      <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies} />
-      <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies} />
-      <Row title="Documentaries" fetchUrl={requests.fetchDocumentaries} />
+      <Row
+        link="trending"
+        title="Trending Now"
+        fetchUrl={requests.fetchTrending}
+      />
+      <Row link="top" title="Top Rated" fetchUrl={requests.fetchTopRated} />
+      <Row
+        link="action"
+        title="Action Movies"
+        fetchUrl={requests.fetchActionMovies}
+      />
+      <Row
+        link="comedy"
+        title="Comedy Movies"
+        fetchUrl={requests.fetchComedyMovies}
+      />
+      <Row
+        link="horror"
+        title="Horror Movies"
+        fetchUrl={requests.fetchHorrorMovies}
+      />
+      <Row
+        link="romance"
+        title="Romance Movies"
+        fetchUrl={requests.fetchRomanceMovies}
+      />
+      <Row
+        link="documentaries"
+        title="Documentaries"
+        fetchUrl={requests.fetchDocumentaries}
+      />
     </div>
   );
 }

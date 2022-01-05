@@ -45,7 +45,7 @@ npm start
 
 
 ### Website
-Under development...
+https://react-netflix-clone-delta.vercel.app/
 
 
 ### Screens

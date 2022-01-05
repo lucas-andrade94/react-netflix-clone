@@ -3,7 +3,7 @@
   top: 0;
   padding: 1.5rem;
   width: 100%;
-  height: 30px;
+  height: 20px;
   z-index: 1;
 
   /* Animations */
@@ -14,6 +14,7 @@
 .nav__contents {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .nav__black {
@@ -22,18 +23,39 @@
 
 .nav__logo {
   position: fixed;
-  top: 15px;
-  left: 1.5rem;
+  top: 10px;
+  left: 2rem;
   width: 80px;
   object-fit: contain;
   cursor: pointer;
 }
 
+.nav__links {
+  margin-left: 100px;
+}
+
+.nav__link {
+  padding: 0 0.5rem;
+  text-decoration: none;
+  color: white;
+}
+
+.nav__link:hover {
+  text-decoration: underline;
+  color: #999;
+}
+
 .nav__avatar {
   position: fixed;
   cursor: pointer;
-  top: 25px;
-  right: 1.5rem;
+  top: 20px;
+  right: 2rem;
   width: 30px;
   height: 30px;
+}
+
+@media (max-width: 992px) {
+  .nav__links {
+    display: none;
+  }
 }
