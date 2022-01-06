@@ -110,9 +110,3 @@
   border: none;
   cursor: pointer;
 }
-
-@media (max-width: 415px) {
-  .loginScreen__logo {
-    display: none;
-  }
-}

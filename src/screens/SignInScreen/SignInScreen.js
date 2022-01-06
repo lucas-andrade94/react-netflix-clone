@@ -21,6 +21,22 @@ function SignInScreen() {
       .catch((error) => alert(error.message));
   };
 
+  const register = (event) => {
+    event.preventDefault();
+
+    auth
+      .createUserWithEmailAndPassword(
+        emailRef.current.value,
+        passwordRef.current.value
+      )
+      .then((authUser) => {
+        console.log(authUser);
+      })
+      .catch((error) => {
+        alert(error.message);
+      });
+  };
+
   return (
     <div className="signInScreen">
       <form>
@@ -33,8 +49,10 @@ function SignInScreen() {
 
         <h4>
           <span className="signInScreen__gray">New to Netflix? </span>
-          <span>Sign up now.</span>
         </h4>
+        <button type="submit" onClick={register}>
+          Register
+        </button>
       </form>
     </div>
   );
