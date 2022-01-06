@@ -1,0 +1,118 @@
+.loginScreen {
+  position: relative;
+  height: 100%;
+  background: url("https://mensfolio-my-production.s3.ap-southeast-1.amazonaws.com/2019/09/24203732/netflix-image.jpg")
+    center no-repeat;
+  background-size: cover;
+}
+
+.loginScreen__logo {
+  position: fixed;
+  left: 0;
+  width: 150px;
+  object-fit: contain;
+  padding-left: 2rem;
+  cursor: pointer;
+}
+
+.loginScreen__signIn {
+  position: fixed;
+  right: 2rem;
+  top: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.loginScreen__signUp {
+  position: fixed;
+  right: 9rem;
+  top: 1.25rem;
+  padding: 0.75rem 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.loginScreen__gradient {
+  width: 100%;
+  z-index: 1;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  background-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.8) 0,
+    rgba(0, 0, 0, 0) 60%,
+    rgba(0, 0, 0, 0.8) 100%
+  );
+}
+
+.loginScreen__body {
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  z-index: 1;
+  color: #fff;
+  padding: 1.25rem;
+}
+
+.loginScreen__body > h1 {
+  font-size: 3.125rem;
+  padding-bottom: 1.25rem;
+}
+
+.loginScreen__body > h2 {
+  font-size: 2rem;
+  font-weight: 400;
+  padding-bottom: 1.75rem;
+}
+
+.loginScreen__body > h3 {
+  font-size: 1.3rem;
+  font-weight: 400;
+}
+
+.loginScreen__input {
+  margin-top: 1.25rem;
+}
+
+.loginScreen__input > form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loginScreen__input > form > input {
+  padding: 0.75rem;
+  outline-width: 0;
+  height: 1.75rem;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+
+.loginScreen__getStarted {
+  padding: 1.05rem 1.25rem;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #e50914;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 415px) {
+  .loginScreen__logo {
+    display: none;
+  }
+}

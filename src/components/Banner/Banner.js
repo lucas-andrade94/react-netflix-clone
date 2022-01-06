@@ -7,7 +7,6 @@ import "./Banner.css";
 
 function Banner() {
   const [movie, setMovie] = useState([]);
-  let firstDate = new Date(movie?.first_air_date);
 
   useEffect(() => {
     async function fetchData() {
@@ -25,6 +24,11 @@ function Banner() {
 
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
+  }
+
+  function dateLaunch(date) {
+    let firstDate = new Date(date);
+    return firstDate.getFullYear();
   }
 
   return (
@@ -50,7 +54,7 @@ function Banner() {
                 precision={0.1}
                 readOnly
               />
-              <p>{firstDate.getFullYear()}</p>
+              <p>{dateLaunch(movie?.first_air_date)}</p>
             </div>
             <div className="banner__buttons">
               <button className="banner__button">Play</button>
