@@ -6,21 +6,42 @@ import requests from "../../api/Request";
 import "./Banner.css";
 
 function Banner() {
+  const TMDB_API_KEY = process.env.REACT_APP_API_KEY;
   const [movie, setMovie] = useState([]);
+  const [season, setSeason] = useState(0);
 
   useEffect(() => {
     async function fetchData() {
       const request = await axios.get(requests.fetchNetflixOriginals);
-      setMovie(
-        request.data.results[
-          Math.floor(Math.random() * request.data.results.length - 1)
-        ]
+      let randomNumber = Math.floor(
+        Math.random() * request.data.results.length - 1
       );
+
+      while (randomNumber === -1) {
+        randomNumber = Math.floor(
+          Math.random() * request.data.results.length - 1
+        );
+      }
+
+      setMovie(request.data.results[randomNumber]);
       return request;
     }
 
     fetchData();
   }, []);
+
+  useEffect(() => {
+    async function fetchSeason(id) {
+      const request = await axios.get(
+        `/tv/${id}?api_key=${TMDB_API_KEY}&language=en-US`
+      );
+
+      setSeason(request.data.number_of_seasons);
+      return request;
+    }
+
+    fetchSeason(movie.id);
+  }, [movie]);
 
   function truncate(string, n) {
     return string?.length > n ? string.substr(0, n - 1) + "..." : string;
@@ -55,6 +76,7 @@ function Banner() {
                 readOnly
               />
               <p>{dateLaunch(movie?.first_air_date)}</p>
+              <p>{season > 1 ? `${season} seasons` : `${season} season`}</p>
             </div>
             <div className="banner__buttons">
               <button className="banner__button">Play</button>

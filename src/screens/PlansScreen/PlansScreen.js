@@ -41,7 +41,6 @@ function PlansScreen() {
             products[productDoc.id].prices = {
               priceId: price.id,
               priceData: price.data(),
-              priceAmount: price.data().unit_amount,
             };
           });
         });

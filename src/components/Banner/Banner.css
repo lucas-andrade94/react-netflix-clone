@@ -36,6 +36,10 @@
   align-items: center;
 }
 
+.banner__information > p {
+  padding-left: 0.5rem;
+}
+
 .banner__description {
   width: 45rem;
   line-height: 1.3;
