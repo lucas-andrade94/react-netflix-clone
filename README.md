@@ -20,6 +20,7 @@ Project developed using the following technologies:
 - [Redux](https://redux.js.org/)
 - [Firebase](https://firebase.google.com/)
 - [The Movie Database API](https://www.themoviedb.org/)
+- [Stripe](https://stripe.com/en-ca)
 
 
 ## 💿 Instalation
