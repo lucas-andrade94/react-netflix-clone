@@ -6,7 +6,6 @@ import requests from "../../api/Request";
 import "./Banner.css";
 
 function Banner() {
-  const TMDB_API_KEY = process.env.REACT_APP_API_KEY;
   const [movie, setMovie] = useState([]);
   const [season, setSeason] = useState(0);
 
@@ -33,7 +32,7 @@ function Banner() {
   useEffect(() => {
     async function fetchSeason(id) {
       const request = await axios.get(
-        `/tv/${id}?api_key=${TMDB_API_KEY}&language=en-US`
+        `/tv/${id}?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       );
 
       setSeason(request.data.number_of_seasons);
