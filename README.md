@@ -51,8 +51,9 @@ https://react-netflix-clone-delta.vercel.app/
 
 ### Screens
 <div align="center">
-    <img alt="Home Page" title="Home Page" src=".github\screen-1.png?raw=true" width="200px" />
-    <img alt="Home Page" title="Home Page" src=".github\screen-2.png?raw=true" width="200px" />
+    <img alt="Login Page" title="Login Page" src=".github\screen-1.png?raw=true" width="200px" />
+    <img alt="SignIn Page" title="SignIn Page" src=".github\screen-2.png?raw=true" width="200px" />
     <img alt="Home Page" title="Home Page" src=".github\screen-3.png?raw=true" width="200px" />
-    <img alt="Home Page" title="Home Page" src=".github\screen-4.png?raw=true" width="200px" />
+    <img alt="Profile Page" title="Profile Page" src=".github\screen-4.png?raw=true" width="200px" />
+    <img alt="Payment Page" title="Payment Page" src=".github\screen-4.png?raw=true" width="200px" />
 </div>
