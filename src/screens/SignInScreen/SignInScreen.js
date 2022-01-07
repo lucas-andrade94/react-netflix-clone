@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 import "./SignInScreen.css";
 import { auth } from "../../firebase";
 
-function SignInScreen() {
+function SignInScreen({ emailLoginScreen }) {
   const emailRef = useRef(null);
   const passwordRef = useRef(null);
+  const [email, setEmail] = useState(emailLoginScreen);
 
   const signIn = (event) => {
     event.preventDefault();
@@ -41,7 +42,13 @@ function SignInScreen() {
     <div className="signInScreen">
       <form>
         <h1>Sign In</h1>
-        <input ref={emailRef} placeholder="Email" type="email" />
+        <input
+          ref={emailRef}
+          placeholder="Email"
+          type="email"
+          value={email}
+          onChange={(event) => setEmail(event.target.value)}
+        />
         <input ref={passwordRef} placeholder="Password" type="password" />
         <button type="submit" onClick={signIn}>
           Sign In

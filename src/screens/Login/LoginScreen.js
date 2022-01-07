@@ -7,6 +7,9 @@ import NetflixLogo from "../../assets/netflix-logo.png";
 
 function LoginScreen() {
   const [signIn, setSignIn] = useState(false);
+  const [email, setEmail] = useState("");
+
+  console.log(email);
 
   return (
     <>
@@ -30,19 +33,20 @@ function LoginScreen() {
 
         <div className="loginScreen__body">
           {signIn ? (
-            <SignInScreen />
+            <SignInScreen emailLoginScreen={email} />
           ) : (
             <>
               <h1>Unlimited films, TV programmes and more.</h1>
               <h2>Watch anywhere. Cancel at any time.</h2>
-              <h3>
-                Ready to watch? Enter your email to create or restart your
-                membership.
-              </h3>
+              <h3>Ready to watch? Click on Sign In and register.</h3>
 
               <div className="loginScreen__input">
                 <form>
-                  <input type="email" placeholder="Email Address" />
+                  <input
+                    type="email"
+                    placeholder="Email Address"
+                    onChange={(event) => setEmail(event.target.value)}
+                  />
                   <button
                     onClick={() => setSignIn(true)}
                     className="loginScreen__getStarted"
