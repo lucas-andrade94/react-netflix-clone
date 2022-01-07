@@ -26,3 +26,13 @@
 .plansScreen__plan--disabled > button {
   background-color: gray !important;
 }
+
+@media (max-width: 660px) {
+  .plansScreen__plan {
+    flex-direction: column;
+  }
+
+  .plansScreen__info {
+    padding: 0.5rem 0;
+  }
+}

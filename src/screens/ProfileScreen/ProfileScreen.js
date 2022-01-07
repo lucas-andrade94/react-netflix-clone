@@ -31,6 +31,15 @@ function ProfileScreen() {
                 >
                   Sign Out
                 </button>
+                <div className="profileScreen__information">
+                  <p>
+                    To start, click on Subscribe in any plan and use the
+                    following credit card:
+                  </p>
+                  <p>4242 4242 4242 4242 - 01/30 - CVC: 123</p>
+                  <p>Name on Card: ABC</p>
+                  <p>Billing Address: ABC in all fields</p>
+                </div>
               </div>
             </div>
           </div>

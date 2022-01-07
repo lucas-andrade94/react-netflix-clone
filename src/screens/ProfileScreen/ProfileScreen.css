@@ -60,3 +60,36 @@
   border: none;
   cursor: pointer;
 }
+
+.profileScreen__information {
+  color: #e50914;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0;
+}
+
+.profileScreen__information > p {
+  text-align: center;
+  font-weight: 500;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 994px) {
+  .profileScreen__information > p {
+    text-align: center;
+    font-weight: 500;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 660px) {
+  .profileScreen {
+    height: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  .profileScreen__info > img {
+    display: none;
+  }
+}
